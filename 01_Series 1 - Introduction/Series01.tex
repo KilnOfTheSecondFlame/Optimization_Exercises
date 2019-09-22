@@ -95,10 +95,28 @@
 \author{Pascal Baumann}
 \maketitle
 
-\tableofcontents
-
-\newpage
 \graphicspath{{./img/}}
+
+\section{Exercise 2}
+\textit{The construction of a lecture time-table can be mathematically formulated (simplified) as an assignment of a lecturer, a time slot, and a room to every lecture.}
+
+\textit{Find an upper bound for the number of possible time-tables if there are 500 lectures per week, 100 lecturers, 40 time slots per week, and 15 rooms.}
+
+\vspace{1em}
+
+For every lecture there are $l$ lecturers, $t$ time slots and $r$ rooms. Or in a formulaic form $l\cdot t\cdot r$. A naïve approach (ignoring the conflicts of multiple lectures in the same room, given by the same lecturer at the same time) would give us an upper bound of
+\begin{equation*}
+    UpperBound = (l\cdot t \cdot r)^{500}
+\end{equation*}
+\begin{equation*}
+    UpperBound = (100\cdot 40\cdot 15)^{500} \approx 1.1902\cdot 10^{2389} 
+\end{equation*}
+
+Given the enumeration time of 1 million time tables per second, this task woud take our computer:
+
+\begin{equation*}
+    \frac{1.1902\cdot 10^{2389}\text{ timetables}}{10^6\frac{\text{timetables}}{\text{second}}} = 1.1902\cdot 10^{2383}\text{ seconds} \approx 3.774\cdot 10^{2375}\text{ years}
+\end{equation*}
 
 
 \end{document}
