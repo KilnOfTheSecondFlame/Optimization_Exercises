@@ -118,5 +118,26 @@ Given the enumeration time of 1 million time tables per second, this task woud t
     \frac{1.1902\cdot 10^{2389}\text{ timetables}}{10^6\frac{\text{timetables}}{\text{second}}} = 1.1902\cdot 10^{2383}\text{ seconds} \approx 3.774\cdot 10^{2375}\text{ years}
 \end{equation*}
 
+\section{Exercise 3}
+
+The number of operation needed for the first maximum would be $n$, for the next $n-1$ and so on. The total number of operations needed would of course be the sum of all operations or
+\begin{equation*}
+    \sum_{i=0}^n{n-i} = n + (n-1) + (n-2) + \cdots + 1 = \frac{n\cdot (n+1)}{2}
+\end{equation*}
+
+Our modern computer could do $60\cdot 10^6$ or $6\cdot 10^7$ operations in one minute. To find the number of list elements that corresponds to we have to calculate the intercept
+\begin{equation*}
+    \frac{n\cdot (n+1)}{2} = 6\cdot 10^7
+\end{equation*}
+
+\begin{equation*}
+    n^2 + n = 1.2\cdot 10^8
+\end{equation*}
+
+\begin{equation*}
+    n^2 + n - 1.2\cdot 10^8 = 0
+\end{equation*}
+
+Solving for $n$ gives us $n_1 \approx 10954$ and $n_2 = -10955$, where we remove the negative result. Hence we would assume to be able to sort 10954 elements per minute.
 
 \end{document}
